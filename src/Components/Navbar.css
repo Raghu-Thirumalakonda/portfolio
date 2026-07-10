@@ -1,0 +1,368 @@
+/* ===========================
+        NAVBAR
+=========================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 8%;
+
+    background:rgba(5,8,22,.75);
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:1000;
+
+    transition:.4s;
+}
+
+/* ===========================
+          LOGO
+=========================== */
+
+.navbar h2{
+
+    font-size:2rem;
+    font-weight:700;
+
+    color:#12d8e8;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.navbar h2:hover{
+
+    transform:scale(1.05);
+
+    text-shadow:0 0 15px #12d8e8;
+}
+
+/* ===========================
+         MENU
+=========================== */
+
+.navbar ul{
+
+    display:flex;
+    align-items:center;
+
+    gap:40px;
+
+    list-style:none;
+}
+
+.navbar ul li{
+
+    position:relative;
+}
+
+.navbar ul li a{
+
+    color:#ffffff;
+
+    font-size:1rem;
+    font-weight:500;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+/* Underline Animation */
+
+.navbar ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0;
+    height:2px;
+
+    background:#12d8e8;
+
+    transition:.3s;
+}
+
+.navbar ul li a:hover{
+
+    color:#12d8e8;
+}
+
+.navbar ul li a:hover::after{
+
+    width:100%;
+}
+
+/* ===========================
+       THEME BUTTON
+=========================== */
+
+.theme-btn{
+
+    width:48px;
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:#12d8e8;
+
+    font-size:1.3rem;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.theme-btn:hover{
+
+    transform:rotate(180deg) scale(1.08);
+
+    background:#12d8e8;
+
+    color:#050816;
+
+    box-shadow:0 0 20px rgba(18,216,232,.5);
+}
+
+/* ===========================
+      LIGHT THEME
+=========================== */
+
+body.light-theme .navbar{
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+}
+
+body.light-theme .navbar h2{
+
+    color:#2563eb;
+}
+
+body.light-theme .navbar ul li a{
+
+    color:#1f2937;
+}
+
+body.light-theme .navbar ul li a:hover{
+
+    color:#2563eb;
+}
+
+body.light-theme .navbar ul li a::after{
+
+    background:#2563eb;
+}
+
+body.light-theme .theme-btn{
+
+    background:#f1f5f9;
+
+    color:#2563eb;
+}
+
+body.light-theme .theme-btn:hover{
+
+    background:#2563eb;
+
+    color:#ffffff;
+}
+
+/* ===========================
+      RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+    .navbar{
+
+        padding:0 5%;
+    }
+
+    .navbar ul{
+
+        gap:25px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+
+        height:70px;
+        padding:0 20px;
+    }
+
+    .navbar h2{
+
+        font-size:1.7rem;
+    }
+
+    .navbar ul{
+
+        gap:18px;
+    }
+
+    .navbar ul li a{
+
+        font-size:.9rem;
+    }
+
+    .theme-btn{
+
+        width:42px;
+        height:42px;
+
+        font-size:1.1rem;
+    }
+
+}
+
+
+
+
+/* Right Side */
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+}
+
+/* Resume Button */
+
+.resume-btn{
+
+    text-decoration:none;
+
+    padding:10px 24px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        135deg,
+        #12d8e8,
+        #2563eb
+    );
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.resume-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 25px rgba(18,216,232,.35);
+}
+
+/* Theme Button */
+
+.theme-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:1.2rem;
+
+    transition:.3s;
+}
+
+.theme-btn:hover{
+
+    background:#12d8e8;
+
+    color:#050816;
+}
+
+/* Light Theme */
+
+body.light-theme .resume-btn{
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+}
+
+body.light-theme .theme-btn{
+
+    background:#ffffff;
+
+    color:#2563eb;
+
+    border:1px solid #dbeafe;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.nav-right{
+
+gap:10px;
+}
+
+.resume-btn{
+
+padding:8px 18px;
+
+font-size:.9rem;
+}
+
+.theme-btn{
+
+width:42px;
+
+height:42px;
+}
+
+}

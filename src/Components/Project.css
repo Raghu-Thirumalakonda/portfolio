@@ -1,0 +1,304 @@
+/*==============================
+          PROJECTS
+===============================*/
+
+#projects{
+    width:100%;
+    min-height:100vh;
+    padding:100px 8%;
+
+    background:linear-gradient(
+        180deg,
+        #050816,
+        #0b1120
+    );
+}
+
+.project-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+
+    gap:35px;
+
+    margin-top:50px;
+}
+
+/*==============================
+         PROJECT CARD
+===============================*/
+
+.project-card{
+
+    position:relative;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.25);
+}
+
+/* Gradient Top Line */
+
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #12d8e8,
+        #4facfe,
+        #7b61ff
+    );
+}
+
+.project-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 20px 45px rgba(18,216,232,.20);
+}
+
+.project-card h3{
+
+    font-size:1.9rem;
+
+    color:#12d8e8;
+
+    margin-bottom:18px;
+}
+
+.project-card p{
+
+    font-size:1rem;
+
+    line-height:1.9;
+
+    color:#d1d5db;
+
+    margin-bottom:25px;
+}
+
+/*==============================
+         TECH STACK
+===============================*/
+
+.tech-stack{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:30px;
+}
+
+.tech-stack span{
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(18,216,232,.15);
+
+    color:#12d8e8;
+
+    border:1px solid rgba(18,216,232,.3);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.tech-stack span:hover{
+
+    background:#12d8e8;
+
+    color:#050816;
+}
+
+/*==============================
+            BUTTONS
+===============================*/
+
+.project-buttons{
+
+    display:flex;
+
+    gap:15px;
+}
+
+.project-buttons a{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:14px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.4s;
+}
+
+.project-buttons a:first-child{
+
+    background:linear-gradient(
+        90deg,
+        #12d8e8,
+        #2563eb
+    );
+
+    color:#ffffff;
+}
+
+.project-buttons a:first-child:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 10px 25px rgba(18,216,232,.35);
+}
+
+.project-buttons a:last-child{
+
+    border:2px solid #12d8e8;
+
+    color:#12d8e8;
+}
+
+.project-buttons a:last-child:hover{
+
+    background:#12d8e8;
+
+    color:#050816;
+
+    transform:translateY(-5px);
+}
+
+/*==============================
+         LIGHT THEME
+===============================*/
+
+body.light-theme #projects{
+
+    background:linear-gradient(
+        180deg,
+        #f8fbff,
+        #eef6ff
+    );
+}
+
+body.light-theme .project-card{
+
+    background:rgba(255,255,255,.8);
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.08);
+}
+
+body.light-theme .project-card h3{
+
+    color:#2563eb;
+}
+
+body.light-theme .project-card p{
+
+    color:#4b5563;
+}
+
+body.light-theme .tech-stack span{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    border:1px solid #bfdbfe;
+}
+
+body.light-theme .tech-stack span:hover{
+
+    background:#2563eb;
+
+    color:#ffffff;
+}
+
+body.light-theme .project-buttons a:last-child{
+
+    border-color:#2563eb;
+
+    color:#2563eb;
+}
+
+body.light-theme .project-buttons a:last-child:hover{
+
+    background:#2563eb;
+
+    color:#ffffff;
+}
+
+/*==============================
+         RESPONSIVE
+===============================*/
+
+@media(max-width:992px){
+
+.project-grid{
+
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:576px){
+
+#projects{
+
+padding:80px 20px;
+}
+
+.project-card{
+
+padding:25px;
+}
+
+.project-buttons{
+
+flex-direction:column;
+}
+
+.project-card h3{
+
+font-size:1.6rem;
+}
+
+}
