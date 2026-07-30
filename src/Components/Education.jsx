@@ -3,40 +3,103 @@ import "./Education.css";
 function Education() {
   return (
     <section id="education">
-      <h2 className="title">Education</h2>
 
-      <div className="edu-card">
-        <h3>Bachelor of Technology (B.Tech)</h3>
+      <h2 className="title">
+        Education
+      </h2>
 
-        <h4>Computer Science and Engineering (CSE)</h4>
+      <div className="timeline">
 
-        <p>
-          <strong>College:</strong> Audisankara Institute of Technology,
-          Gudur, SPSR Nellore District, Andhra Pradesh
-        </p>
+        {/* B.Tech */}
 
-        <p>
-          <strong>Affiliated To:</strong> Jawaharlal Nehru Technological
-          University Anantapur (JNTUA)
-        </p>
+        <div className="timeline-item">
 
-        <p>
-          <strong>Duration:</strong> 2022 - 2026
-        </p>
+          <div className="timeline-dot"></div>
 
-        <p>
-          <strong>CGPA:</strong> 7.5 / 10
-        </p>
+          <div className="edu-card">
 
-      
+            <span className="year">
+              2022 - 2026
+            </span>
 
+            <h3>
+              Bachelor of Technology (CSE)
+            </h3>
 
-        <p>
-          <strong>Career Objective:</strong> Passionate about building scalable
-          web applications and seeking opportunities as a Java Full Stack
-          Developer to apply my technical and problem-solving skills.
-        </p>
+            <h4>
+              Audisankara Institute of Technology
+            </h4>
+
+            <p>
+              Computer Science Engineering
+            </p>
+
+            <p>
+              CGPA : <strong>7.5</strong>
+            </p>
+
+          </div>
+
+        </div>
+
+        {/* Intermediate */}
+
+        <div className="timeline-item">
+
+          <div className="timeline-dot"></div>
+
+          <div className="edu-card">
+
+            <span className="year">
+              2020 - 2022
+            </span>
+
+            <h3>
+              Intermediate (MPC)
+            </h3>
+
+            <h4>
+              Sri Chaitanya Junior College
+            </h4>
+
+            <p>
+              Mathematics, Physics & Chemistry
+            </p>
+
+          </div>
+
+        </div>
+
+        {/* SSC */}
+
+        <div className="timeline-item">
+
+          <div className="timeline-dot"></div>
+
+          <div className="edu-card">
+
+            <span className="year">
+              2019 - 2020
+            </span>
+
+            <h3>
+              Secondary School (SSC)
+            </h3>
+
+            <h4>
+              Z.P High School
+            </h4>
+
+            <p>
+              Completed Secondary Education
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
   );
 }

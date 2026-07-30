@@ -1,69 +1,49 @@
 import "./Certification.css";
 
 function Certifications() {
+  const certificates = [
+    {
+      title: "Java Programming",
+      provider: "Infosys Springboard",
+      year: "2025",
+    },
+
+    {
+      title: "React JS",
+      provider: "Udemy",
+      year: "2025",
+    },
+
+    {
+      title: "SQL & Database",
+      provider: "HackerRank",
+      year: "2025",
+    },
+
+    {
+      title: "Java Full Stack",
+      provider: "Self Learning",
+      year: "2026",
+    },
+  ];
+
   return (
     <section id="certifications">
-
       <h2 className="title">Certifications</h2>
 
       <div className="cert-grid">
+        {certificates.map((item, index) => (
+          <div className="cert-card" key={index}>
+            <div className="cert-icon">🏆</div>
 
-        <div className="cert-card">
+            <h3>{item.title}</h3>
 
-          <h3>Java Full Stack Development</h3>
+            <p>{item.provider}</p>
 
-          <h4>JSpiders Training Institute</h4>
-
-          <p>
-            Successfully completed intensive training in Java,
-            Spring Boot, React JS, MySQL, HTML, CSS,
-            JavaScript and REST APIs with hands-on projects.
-          </p>
-
-          <span className="cert-badge">
-            ✔ Completed
-          </span>
-
-        </div>
-
-        <div className="cert-card">
-
-          <h3>React JS Development</h3>
-
-          <h4>Self Learning & Projects</h4>
-
-          <p>
-            Built responsive web applications using React JS,
-            React Router, Redux, Hooks and modern UI design
-            principles.
-          </p>
-
-          <span className="cert-badge">
-            ✔ Completed
-          </span>
-
-        </div>
-
-        <div className="cert-card">
-
-          <h3>SQL & Database Management</h3>
-
-          <h4>MySQL</h4>
-
-          <p>
-            Gained practical experience in database design,
-            SQL queries, joins, normalization, stored procedures,
-            and CRUD operations.
-          </p>
-
-          <span className="cert-badge">
-            ✔ Completed
-          </span>
-
-        </div>
-
+            <span>{item.year}</span>
+          </div>
+        ))}
       </div>
-
     </section>
   );
 }

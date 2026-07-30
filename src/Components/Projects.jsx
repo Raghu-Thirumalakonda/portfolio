@@ -1,143 +1,81 @@
 import "./Project.css";
 
 function Projects() {
+  const projects = [
+    {
+      title: "🍔 Food Hub",
+
+      description:
+        "A modern food ordering web application developed using React JS. Features include category filtering, cart management, responsive UI, Redux state management, and smooth navigation.",
+
+      tech: ["React JS", "Redux", "JavaScript", "CSS"],
+
+      live: "https://food-project-bay-five.vercel.app/",
+
+      github: "https://github.com/Raghu-Thirumalakonda/Food-Project",
+    },
+
+    {
+      title: "🏥 Health Insurance Management System",
+
+      description:
+        "A full-stack Health Insurance Management System developed using Spring Boot, MySQL, JPA and Thymeleaf. The system manages Patients, Doctors, Vendors and Insurance Policies with secure CRUD operations.",
+
+      tech: ["Java", "Spring Boot", "MySQL", "JPA", "Thymeleaf"],
+
+      live: "#",
+
+      github:
+        "https://github.com/Raghu-Thirumalakonda/Health-Insurance-Management-System",
+    },
+
+    {
+      title: "💼 Portfolio Website",
+
+      description:
+        "Personal portfolio website developed using React JS with premium UI, dark/light theme, responsive design, EmailJS integration and smooth animations.",
+
+      tech: ["React JS", "CSS3", "JavaScript"],
+
+      live: "https://portfolio-qf8l.vercel.app",
+
+      github: "https://github.com/Raghu-Thirumalakonda",
+    },
+  ];
+
   return (
     <section id="projects">
-
       <h2 className="title">My Projects</h2>
 
       <div className="project-grid">
+        {projects.map((project, index) => (
+          <div className="project-card" key={index}>
+            <div className="project-image">
+              <span>🚀</span>
+            </div>
 
-        {/* ================= FOOD HUB ================= */}
+            <h3>{project.title}</h3>
 
-        <div className="project-card">
+            <p>{project.description}</p>
 
-          <h3>🍔 Food Hub - Food Ordering Website</h3>
+            <div className="tech-stack">
+              {project.tech.map((tech, i) => (
+                <span key={i}>{tech}</span>
+              ))}
+            </div>
 
-          <p>
-            A responsive food ordering web application developed using
-            React JS. Users can browse food categories, search items,
-            manage their cart, and place orders through a modern,
-            user-friendly interface.
-          </p>
+            <div className="project-buttons">
+              <a href={project.live} target="_blank" rel="noreferrer">
+                Live Demo
+              </a>
 
-          <div className="tech-stack">
-            <span>React JS</span>
-            <span>Redux</span>
-            <span>JavaScript</span>
-            <span>HTML5</span>
-            <span>CSS3</span>
+              <a href={project.github} target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+            </div>
           </div>
-
-          <div className="project-buttons">
-
-            <a
-              href="https://food-project-bay-five.vercel.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Live Demo
-            </a>
-
-            <a
-              href="https://github.com/Raghu-thirumalakonda"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-
-          </div>
-
-        </div>
-
-        {/* ================= HEALTH INSURANCE ================= */}
-
-        <div className="project-card">
-
-          <h3>🏥 Health Insurance Management System</h3>
-
-          <p>
-            Developed a Health Insurance Management System using Java,
-            Spring Boot, Spring Data JPA, Hibernate, and MySQL.
-            The application allows administrators to manage customers,
-            insurance policies, claims, and policy details through
-            REST APIs following a layered architecture.
-          </p>
-
-          <div className="tech-stack">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>REST API</span>
-            <span>JPA</span>
-            <span>Hibernate</span>
-            <span>MySQL</span>
-          </div>
-
-          <div className="project-buttons">
-
-            <a
-              href="#"
-            >
-              Coming Soon
-            </a>
-
-            <a
-              href="https://github.com/Raghu-Thirumalakonda/Health-insurence-management-system"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-
-          </div>
-
-        </div>
-
-        {/* ================= PORTFOLIO ================= */}
-
-        <div className="project-card">
-
-          <h3>💼 Personal Portfolio Website</h3>
-
-          <p>
-            Designed and developed a premium responsive portfolio using
-            React JS. It showcases my skills, education, certifications,
-            projects, and contact details with modern UI, dark/light
-            themes, smooth scrolling, and responsive layouts.
-          </p>
-
-          <div className="tech-stack">
-            <span>React JS</span>
-            <span>JavaScript</span>
-            <span>HTML5</span>
-            <span>CSS3</span>
-          </div>
-
-          <div className="project-buttons">
-
-            <a
-              href="https://raghu-thirumalakonda.github.io/Portfolio/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Live Demo
-            </a>
-
-            <a
-              href="https://github.com/Raghu-thirumalakonda"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-
-          </div>
-
-        </div>
-
+        ))}
       </div>
-
     </section>
   );
 }

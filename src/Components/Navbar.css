@@ -15,8 +15,8 @@
 
     padding:0 8%;
 
-    background:rgba(5,8,22,.75);
-    backdrop-filter:blur(20px);
+    background:rgba(5,8,22,.80);
+    backdrop-filter:blur(18px);
 
     border-bottom:1px solid rgba(255,255,255,.08);
 
@@ -29,7 +29,7 @@
           LOGO
 =========================== */
 
-.navbar h2{
+.logo{
 
     font-size:2rem;
     font-weight:700;
@@ -41,7 +41,7 @@
     transition:.3s;
 }
 
-.navbar h2:hover{
+.logo:hover{
 
     transform:scale(1.05);
 
@@ -49,39 +49,40 @@
 }
 
 /* ===========================
-         MENU
+        NAV LINKS
 =========================== */
 
-.navbar ul{
+.nav-links{
 
     display:flex;
     align-items:center;
-
-    gap:40px;
+    gap:35px;
 
     list-style:none;
 }
 
-.navbar ul li{
+.nav-links li{
 
     position:relative;
 }
 
-.navbar ul li a{
+.nav-links li a{
 
     color:#ffffff;
+    text-decoration:none;
 
     font-size:1rem;
     font-weight:500;
 
-    text-decoration:none;
-
-    transition:.3s;
+    transition:.35s;
 }
 
-/* Underline Animation */
+.nav-links li a:hover{
 
-.navbar ul li a::after{
+    color:#12d8e8;
+}
+
+.nav-links li a::after{
 
     content:"";
 
@@ -98,188 +99,43 @@
     transition:.3s;
 }
 
-.navbar ul li a:hover{
-
-    color:#12d8e8;
-}
-
-.navbar ul li a:hover::after{
+.nav-links li a:hover::after{
 
     width:100%;
 }
 
 /* ===========================
-       THEME BUTTON
+        RIGHT SIDE
 =========================== */
-
-.theme-btn{
-
-    width:48px;
-    height:48px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.08);
-
-    color:#12d8e8;
-
-    font-size:1.3rem;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    cursor:pointer;
-
-    transition:.4s;
-}
-
-.theme-btn:hover{
-
-    transform:rotate(180deg) scale(1.08);
-
-    background:#12d8e8;
-
-    color:#050816;
-
-    box-shadow:0 0 20px rgba(18,216,232,.5);
-}
-
-/* ===========================
-      LIGHT THEME
-=========================== */
-
-body.light-theme .navbar{
-
-    background:rgba(255,255,255,.85);
-
-    backdrop-filter:blur(20px);
-
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-    border-bottom:1px solid rgba(0,0,0,.05);
-}
-
-body.light-theme .navbar h2{
-
-    color:#2563eb;
-}
-
-body.light-theme .navbar ul li a{
-
-    color:#1f2937;
-}
-
-body.light-theme .navbar ul li a:hover{
-
-    color:#2563eb;
-}
-
-body.light-theme .navbar ul li a::after{
-
-    background:#2563eb;
-}
-
-body.light-theme .theme-btn{
-
-    background:#f1f5f9;
-
-    color:#2563eb;
-}
-
-body.light-theme .theme-btn:hover{
-
-    background:#2563eb;
-
-    color:#ffffff;
-}
-
-/* ===========================
-      RESPONSIVE
-=========================== */
-
-@media(max-width:992px){
-
-    .navbar{
-
-        padding:0 5%;
-    }
-
-    .navbar ul{
-
-        gap:25px;
-    }
-
-}
-
-@media(max-width:768px){
-
-    .navbar{
-
-        height:70px;
-        padding:0 20px;
-    }
-
-    .navbar h2{
-
-        font-size:1.7rem;
-    }
-
-    .navbar ul{
-
-        gap:18px;
-    }
-
-    .navbar ul li a{
-
-        font-size:.9rem;
-    }
-
-    .theme-btn{
-
-        width:42px;
-        height:42px;
-
-        font-size:1.1rem;
-    }
-
-}
-
-
-
-
-/* Right Side */
 
 .nav-right{
 
     display:flex;
-
     align-items:center;
-
-    gap:18px;
+    gap:15px;
 }
 
-/* Resume Button */
+/* ===========================
+      RESUME BUTTON
+=========================== */
 
 .resume-btn{
 
-    text-decoration:none;
-
-    padding:10px 24px;
+    padding:11px 22px;
 
     border-radius:30px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    font-weight:600;
 
     background:linear-gradient(
         135deg,
         #12d8e8,
         #2563eb
     );
-
-    color:#ffffff;
-
-    font-weight:600;
 
     transition:.35s;
 }
@@ -288,63 +144,233 @@ body.light-theme .theme-btn:hover{
 
     transform:translateY(-3px);
 
-    box-shadow:
-    0 10px 25px rgba(18,216,232,.35);
+    box-shadow:0 10px 25px rgba(18,216,232,.35);
 }
 
-/* Theme Button */
+/* ===========================
+      THEME BUTTON
+=========================== */
 
 .theme-btn{
 
-    width:48px;
-
-    height:48px;
+    width:45px;
+    height:45px;
 
     border:none;
 
     border-radius:50%;
 
+    cursor:pointer;
+
     background:rgba(255,255,255,.08);
 
-    color:white;
+    color:#ffffff;
 
-    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
     font-size:1.2rem;
 
-    transition:.3s;
+    transition:.35s;
 }
 
 .theme-btn:hover{
+
+    transform:rotate(180deg);
 
     background:#12d8e8;
 
     color:#050816;
 }
 
-/* Light Theme */
+/* ===========================
+      HAMBURGER
+=========================== */
 
-body.light-theme .resume-btn{
+.hamburger{
 
-    background:linear-gradient(
-        135deg,
-        #2563eb,
-        #06b6d4
-    );
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:5px;
+
+    cursor:pointer;
+}
+
+.hamburger span{
+
+    width:28px;
+
+    height:3px;
+
+    background:#ffffff;
+
+    border-radius:5px;
+
+    transition:.35s;
+}
+
+.hamburger.active span:nth-child(1){
+
+    transform:rotate(45deg) translate(6px,6px);
+}
+
+.hamburger.active span:nth-child(2){
+
+    opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+
+    transform:rotate(-45deg) translate(6px,-6px);
+}
+
+/* ===========================
+      LIGHT THEME
+=========================== */
+
+body.light-theme .navbar{
+
+    background:rgba(255,255,255,.92);
+
+    border-bottom:1px solid #e5e7eb;
+}
+
+body.light-theme .logo{
+
+    color:#2563eb;
+}
+
+body.light-theme .nav-links li a{
+
+    color:#111827;
+}
+
+body.light-theme .nav-links li a:hover{
+
+    color:#2563eb;
+}
+
+body.light-theme .nav-links li a::after{
+
+    background:#2563eb;
 }
 
 body.light-theme .theme-btn{
 
-    background:#ffffff;
+    background:#f3f4f6;
 
     color:#2563eb;
-
-    border:1px solid #dbeafe;
 }
 
-/* Mobile */
+body.light-theme .hamburger span{
+
+    background:#111827;
+}
+
+/* ===========================
+      TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.navbar{
+
+padding:0 5%;
+}
+
+.nav-links{
+
+gap:20px;
+}
+
+.resume-btn{
+
+padding:10px 16px;
+}
+
+}
+
+/* ===========================
+      MOBILE
+=========================== */
 
 @media(max-width:768px){
+
+.navbar{
+
+height:70px;
+
+padding:0 18px;
+}
+
+.logo{
+
+font-size:1.8rem;
+}
+
+.hamburger{
+
+display:flex;
+}
+
+.nav-links{
+
+position:fixed;
+
+top:70px;
+
+left:-100%;
+
+width:100%;
+
+height:calc(100vh - 70px);
+
+background:#050816;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-start;
+
+align-items:center;
+
+padding-top:40px;
+
+gap:28px;
+
+transition:.4s ease;
+
+z-index:999;
+}
+
+.nav-links.active{
+
+left:0;
+}
+
+.nav-links li{
+
+width:100%;
+
+text-align:center;
+}
+
+.nav-links li a{
+
+display:block;
+
+width:100%;
+
+padding:10px 0;
+
+font-size:1.1rem;
+}
 
 .nav-right{
 
@@ -353,16 +379,61 @@ gap:10px;
 
 .resume-btn{
 
-padding:8px 18px;
-
-font-size:.9rem;
+display:none;
 }
 
 .theme-btn{
 
 width:42px;
-
 height:42px;
+}
+
+body.light-theme .nav-links{
+
+background:#ffffff;
+}
+
+}
+
+/* ===========================
+      SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+.navbar{
+
+padding:0 15px;
+}
+
+.logo{
+
+font-size:1.6rem;
+}
+
+.theme-btn{
+
+width:38px;
+height:38px;
+
+font-size:1rem;
+}
+
+.hamburger span{
+
+width:24px;
+}
+
+.nav-links{
+
+padding-top:30px;
+
+gap:22px;
+}
+
+.nav-links li a{
+
+font-size:1rem;
 }
 
 }

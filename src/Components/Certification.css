@@ -1,179 +1,151 @@
 /*==================================
         CERTIFICATIONS
-===================================*/
+==================================*/
 
 #certifications{
 
-    width:100%;
     min-height:100vh;
 
     padding:100px 8%;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-
     background:linear-gradient(
-        180deg,
-        #0b1120,
-        #050816
+        135deg,
+        #050816,
+        #0f172a
     );
 }
+
+/*==================================
+        GRID
+==================================*/
 
 .cert-grid{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 
-    gap:35px;
-
-    margin-top:50px;
+    gap:30px;
 }
 
 /*==================================
-          CARD
-===================================*/
+        CARD
+==================================*/
 
 .cert-card{
 
-    position:relative;
-
-    padding:35px;
-
-    border-radius:25px;
-
     background:rgba(255,255,255,.05);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(15px);
 
     border:1px solid rgba(255,255,255,.08);
 
-    overflow:hidden;
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
 
     transition:.4s;
 
-    box-shadow:
-    0 15px 35px rgba(0,0,0,.25);
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
 }
-
-/* Gradient Top Line */
-
-.cert-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:5px;
-
-    background:linear-gradient(
-        90deg,
-        #12d8e8,
-        #4facfe,
-        #7b61ff
-    );
-}
-
-/* Hover */
 
 .cert-card:hover{
 
     transform:translateY(-10px);
 
     box-shadow:
-    0 20px 45px rgba(18,216,232,.25);
+    0 15px 40px rgba(18,216,232,.35);
 }
 
-/* Title */
+/*==================================
+        ICON
+==================================*/
+
+.cert-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #12d8e8,
+        #2563eb
+    );
+
+    font-size:40px;
+
+    margin-bottom:25px;
+}
+
+/*==================================
+        TEXT
+==================================*/
 
 .cert-card h3{
 
-    font-size:1.6rem;
+    color:white;
 
-    color:#12d8e8;
+    font-size:1.5rem;
 
     margin-bottom:15px;
 }
-
-/* Organization */
-
-.cert-card h4{
-
-    color:#ffffff;
-
-    font-size:1.1rem;
-
-    margin-bottom:12px;
-
-    font-weight:600;
-}
-
-/* Description */
 
 .cert-card p{
 
     color:#cbd5e1;
 
-    line-height:1.8;
-
     margin-bottom:15px;
 }
 
-/* Badge */
-
-.cert-badge{
+.cert-card span{
 
     display:inline-block;
 
     padding:8px 18px;
 
+    background:#12d8e8;
+
+    color:#050816;
+
     border-radius:30px;
 
-    background:rgba(18,216,232,.15);
-
-    color:#12d8e8;
-
-    border:1px solid rgba(18,216,232,.35);
-
-    font-size:.9rem;
-
-    font-weight:600;
+    font-weight:700;
 }
 
 /*==================================
-        LIGHT THEME
-===================================*/
+      LIGHT THEME
+==================================*/
 
 body.light-theme #certifications{
 
-    background:linear-gradient(
-        180deg,
-        #f8fbff,
-        #eef6ff
-    );
+    background:#f8fbff;
 }
 
 body.light-theme .cert-card{
 
-    background:rgba(255,255,255,.85);
+    background:#ffffff;
 
     border:1px solid #e5e7eb;
 
-    box-shadow:
-    0 12px 30px rgba(0,0,0,.08);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
 body.light-theme .cert-card h3{
-
-    color:#2563eb;
-}
-
-body.light-theme .cert-card h4{
 
     color:#111827;
 }
@@ -183,25 +155,11 @@ body.light-theme .cert-card p{
     color:#4b5563;
 }
 
-body.light-theme .cert-badge{
-
-    background:#eff6ff;
-
-    color:#2563eb;
-
-    border:1px solid #bfdbfe;
-}
-
 /*==================================
-        RESPONSIVE
-===================================*/
+      RESPONSIVE
+==================================*/
 
 @media(max-width:768px){
-
-#certifications{
-
-padding:80px 20px;
-}
 
 .cert-grid{
 
@@ -213,9 +171,13 @@ grid-template-columns:1fr;
 padding:25px;
 }
 
-.cert-card h3{
+.cert-icon{
 
-font-size:1.4rem;
+width:70px;
+
+height:70px;
+
+font-size:30px;
 }
 
 }

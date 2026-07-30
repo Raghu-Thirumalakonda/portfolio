@@ -1,64 +1,127 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Navbar.css";
 
 function Navbar() {
 
+  const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
 
-  const toggleTheme = () => {
-
-    setDarkMode(!darkMode);
+  useEffect(() => {
 
     if (darkMode) {
-      document.body.classList.add("light-theme");
-    } else {
       document.body.classList.remove("light-theme");
+    } else {
+      document.body.classList.add("light-theme");
     }
+
+  }, [darkMode]);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
 
     <nav className="navbar">
 
-      <h2 className="logo">
+      {/* Logo */}
+
+      <h2
+        className="logo"
+        onClick={closeMenu}
+      >
         Raghu.
       </h2>
 
-      <ul>
+      {/* Navigation Links */}
 
-        <li><a href="#home">Home</a></li>
+      <ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
-        <li><a href="#about">About</a></li>
+        <li>
+          <a href="#home" onClick={closeMenu}>
+            Home
+          </a>
+        </li>
 
-        <li><a href="#education">Education</a></li>
+        <li>
+          <a href="#about" onClick={closeMenu}>
+            About
+          </a>
+        </li>
 
-        <li><a href="#skills">Skills</a></li>
+        <li>
+          <a href="#education" onClick={closeMenu}>
+            Education
+          </a>
+        </li>
 
-        <li><a href="#projects">Projects</a></li>
+        <li>
+          <a href="#skills" onClick={closeMenu}>
+            Skills
+          </a>
+        </li>
 
-        <li><a href="#certifications">Certificates</a></li>
+        <li>
+          <a href="#projects" onClick={closeMenu}>
+            Projects
+          </a>
+        </li>
 
-        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="#certifications" onClick={closeMenu}>
+            Certifications
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact" onClick={closeMenu}>
+            Contact
+          </a>
+        </li>
+
+        {/* Resume */}
+
+        <li>
+
+          <a
+            href="/Ressume..pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resume-btn"
+            onClick={closeMenu}
+          >
+            Resume
+          </a>
+
+        </li>
 
       </ul>
 
-      <div className="nav-right">
+      {/* Right Side */}
 
-        <a
-          href="/Raghu Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="resume-btn"
-        >
-          Resume
-        </a>
+      <div className="nav-right">
 
         <button
           className="theme-btn"
           onClick={toggleTheme}
+          aria-label="Toggle Theme"
         >
           {darkMode ? "☀️" : "🌙"}
         </button>
+
+        <div
+          className={menuOpen ? "hamburger active" : "hamburger"}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
       </div>
 

@@ -22,46 +22,52 @@ function Footer() {
         REST APIs
       </p>
 
-      <div className="social-icons">
+     <div className="social-icons">
 
-        <a
-          href="https://www.linkedin.com/in/YOUR-LINKEDIN"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaLinkedin />
-        </a>
+  <a
+    href="https://linkedin.com/in/raghu-thirumala-konda-669b35349"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="LinkedIn"
+  >
+    <FaLinkedin />
+  </a>
 
-        <a
-          href="https://github.com/YOUR-GITHUB"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaGithub />
-        </a>
+  <a
+    href="https://github.com/Raghu-Thirumalakonda"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="GitHub"
+  >
+    <FaGithub />
+  </a>
 
-        <a
-          href="https://www.instagram.com/YOUR-INSTAGRAM"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaInstagram />
-        </a>
+  <a
+    href="https://www.instagram.com/_raghu.05._/?hl=en"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Instagram"
+  >
+    <FaInstagram />
+  </a>
 
-        <a
-          href="https://twitter.com/YOUR-TWITTER"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaTwitter />
-        </a>
+  <a
+    href="https://x.com"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="X (Twitter)"
+  >
+    <FaTwitter />
+  </a>
 
-        <a href="mailto:yourmail@gmail.com">
-          <FaEnvelope />
-        </a>
+  <a
+    href="mailto:raghuthirumalakonda808@gmail.com"
+    aria-label="Email"
+  >
+    <FaEnvelope />
+  </a>
 
-      </div>
-
+</div>
       <hr />
 
       <p className="copyright">
