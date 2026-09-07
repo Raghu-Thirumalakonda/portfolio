@@ -59,7 +59,7 @@ function Education() {
             </h3>
 
             <h4>
-              Sri Chaitanya Junior College
+              Krishanmurthy junior collage 
             </h4>
 
             <p>
@@ -87,7 +87,7 @@ function Education() {
             </h3>
 
             <h4>
-              Z.P High School
+              MJPAPBCWRIES SCHOOL
             </h4>
 
             <p>

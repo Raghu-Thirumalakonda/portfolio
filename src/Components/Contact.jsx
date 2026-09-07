@@ -1,22 +1,19 @@
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 function Contact() {
-
   const form = useRef();
 
-  const sendEmail = (e) => {
+  useEffect(() => {
+    emailjs.init("eipEz2dq_PAqLldof");
+  }, []);
 
+  const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_i8ifzeq",
-        "template_a1mon2u",
-        form.current,
-        "eipEz2dq_PAqLldof"
-      )
+      .sendForm("service_i8ifzeq", "template_a1mon2u", form.current)
       .then(() => {
         alert("Message Sent Successfully ✅");
         form.current.reset();
@@ -29,20 +26,17 @@ function Contact() {
 
   return (
     <section id="contact">
-
       <h2 className="title">Contact Me</h2>
 
       <div className="contact-container">
-
         {/* Left Side */}
 
         <div className="contact-info">
-
           <h3>Get In Touch</h3>
 
           <p>
-            Feel free to contact me for job opportunities,
-            internships, freelance projects, or collaborations.
+            Feel free to contact me for job opportunities, internships,
+            freelance projects, or collaborations.
           </p>
 
           <div className="info-box">
@@ -64,21 +58,13 @@ function Contact() {
 
           <div className="info-box">
             <h4>GitHub</h4>
-            <span>
-              https://github.com/Raghu-Thirumalakonda
-            </span>
+            <span>https://github.com/Raghu-Thirumalakonda</span>
           </div>
-
         </div>
 
         {/* Right Side */}
 
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-          className="contact-form"
-        >
-
+        <form ref={form} onSubmit={sendEmail} className="contact-form">
           <input
             type="text"
             name="user_name"
@@ -93,11 +79,7 @@ function Contact() {
             required
           />
 
-          <input
-            type="text"
-            name="company"
-            placeholder="Company Name"
-          />
+          <input type="text" name="company" placeholder="Company Name" />
 
           <textarea
             rows="6"
@@ -106,14 +88,9 @@ function Contact() {
             required
           ></textarea>
 
-          <button type="submit">
-            Send Message 🚀
-          </button>
-
+          <button type="submit">Send Message 🚀</button>
         </form>
-
       </div>
-
     </section>
   );
 }

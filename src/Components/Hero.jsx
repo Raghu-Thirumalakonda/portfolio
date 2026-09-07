@@ -1,5 +1,4 @@
 import "./Hero.css";
-import profile from "../assets/hero.png";
 import { Typewriter } from "react-simple-typewriter";
 
 function Hero() {
@@ -82,14 +81,11 @@ function Hero() {
 
       {/* Right Side */}
 
-     <div className="hero-image" data-aos="fade-left">
-  <div className="image-circle">
-    <img
-      src="/o1 - Copy.jpeg"
-      alt="Raghu Thirumalakonda"
-    />
-  </div>
-</div>
+      <div className="hero-image" data-aos="fade-left">
+        <div className="image-circle">
+          <img src="/o1 - Copy.jpeg" alt="Raghu Thirumalakonda" />
+        </div>
+      </div>
     </section>
   );
 }

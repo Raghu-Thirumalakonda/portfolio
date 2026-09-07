@@ -3,7 +3,9 @@ import "./Project.css";
 function Projects() {
   const projects = [
     {
-      title: "🍔 Food Hub",
+      title: "Food Hub",
+
+      image: "🍔",
 
       description:
         "A modern food ordering web application developed using React JS. Features include category filtering, cart management, responsive UI, Redux state management, and smooth navigation.",
@@ -16,7 +18,24 @@ function Projects() {
     },
 
     {
-      title: "🏥 Health Insurance Management System",
+      title: "Smart Farming",
+
+      image: "🌾",
+
+      description:
+        "An intelligent farming application that helps farmers optimize crop management using IoT sensors, weather predictions, and data analytics. Features include real-time monitoring, yield forecasting, and resource optimization.",
+
+      tech: ["React JS", "Node.js", "MongoDB", "IoT"],
+
+      live: "https://smart-farming-uhl8.onrender.com",
+
+      github: "https://github.com/Raghu-Thirumalakonda/Smart-Farming",
+    },
+
+    {
+      title: "Health Insurance Management System",
+
+      image: "🏥",
 
       description:
         "A full-stack Health Insurance Management System developed using Spring Boot, MySQL, JPA and Thymeleaf. The system manages Patients, Doctors, Vendors and Insurance Policies with secure CRUD operations.",
@@ -30,7 +49,9 @@ function Projects() {
     },
 
     {
-      title: "💼 Portfolio Website",
+      title: "Portfolio Website",
+
+      image: "💼",
 
       description:
         "Personal portfolio website developed using React JS with premium UI, dark/light theme, responsive design, EmailJS integration and smooth animations.",
@@ -51,7 +72,7 @@ function Projects() {
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
             <div className="project-image">
-              <span>🚀</span>
+              <span>{project.image}</span>
             </div>
 
             <h3>{project.title}</h3>

@@ -2,18 +2,15 @@ import { useState, useEffect } from "react";
 import "./Navbar.css";
 
 function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
-
     if (darkMode) {
       document.body.classList.remove("light-theme");
     } else {
       document.body.classList.add("light-theme");
     }
-
   }, [darkMode]);
 
   const toggleTheme = () => {
@@ -25,22 +22,16 @@ function Navbar() {
   };
 
   return (
-
     <nav className="navbar">
-
       {/* Logo */}
 
-      <h2
-        className="logo"
-        onClick={closeMenu}
-      >
+      <h2 className="logo" onClick={closeMenu}>
         Raghu.
       </h2>
 
       {/* Navigation Links */}
 
       <ul className={menuOpen ? "nav-links active" : "nav-links"}>
-
         <li>
           <a href="#home" onClick={closeMenu}>
             Home
@@ -86,7 +77,6 @@ function Navbar() {
         {/* Resume */}
 
         <li>
-
           <a
             href="/Ressume..pdf"
             target="_blank"
@@ -96,15 +86,12 @@ function Navbar() {
           >
             Resume
           </a>
-
         </li>
-
       </ul>
 
       {/* Right Side */}
 
       <div className="nav-right">
-
         <button
           className="theme-btn"
           onClick={toggleTheme}
@@ -122,11 +109,8 @@ function Navbar() {
           <span></span>
           <span></span>
         </div>
-
       </div>
-
     </nav>
-
   );
 }
 
